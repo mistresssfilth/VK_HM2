@@ -1,14 +1,12 @@
 import com.google.inject.Inject;
-
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 
 public class MsgLog {
+    public static int count = 0;
     @Inject
     private Logging logger;
-    public static int count = 0;
-
 
     public void waitForInput() {
         try (Scanner scanner = new Scanner(System.in)) {

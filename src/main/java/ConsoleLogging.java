@@ -2,7 +2,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ConsoleLogging implements Logging{
-    Logger logger = LoggerFactory.getLogger(ConsoleLogging.class.getName());
+    private Logger logger;
+
+    public ConsoleLogging() {
+        logger = LoggerFactory.getLogger(ConsoleLogging.class.getName());
+    }
 
     @Override
     public void logging(String msg, int count) {
