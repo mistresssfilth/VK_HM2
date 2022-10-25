@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <Console name="ConsoleLogger" target="STDOUT">
+            <PatternLayout pattern="N = %m%n"/>
+        </Console>
+        <File name="FileLogger" fileName="logging.log">
+            <PatternLayout pattern="N = %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="ConsoleLogging" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleLogger"/>
+        </Logger>
+        <Logger name="FileLogging" level="debug" additivity="false">
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+    </Loggers>
+</Configuration>
