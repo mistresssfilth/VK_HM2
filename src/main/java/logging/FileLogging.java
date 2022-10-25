@@ -1,12 +1,13 @@
+package logging;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class FileLogging implements Logging{
-    private Logger logger;
-    private String tag;
+public class FileLogging implements Logging {
+    private static final Logger logger = LoggerFactory.getLogger(FileLogging.class.getName());
+    private final String tag;
 
     public FileLogging(String tag) {
-        logger = LoggerFactory.getLogger(FileLogging.class.getName());
         this.tag = tag;
     }
 

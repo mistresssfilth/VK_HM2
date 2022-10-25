@@ -1,7 +1,8 @@
+package logging;
+
 import com.google.inject.Inject;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
-
 
 public class MsgLog {
     public static int count = 0;
@@ -17,9 +18,7 @@ public class MsgLog {
                 count++;
             }
         } catch (IllegalStateException | NoSuchElementException e) {
-            System.out.println("Error");
+            System.out.println(e.getMessage());
         }
     }
-
-
 }

@@ -1,9 +1,14 @@
+package injection;
+
 import com.google.inject.AbstractModule;
+import logging.ConsoleAndFileLogging;
+import logging.ConsoleLogging;
+import logging.FileLogging;
+import logging.Logging;
 import org.jetbrains.annotations.NotNull;
 
 public class LoggerModule extends AbstractModule {
-    private String[] args;
-
+    private final String[] args;
     public LoggerModule(@NotNull String[] args) {
         this.args = args;
     }

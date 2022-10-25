@@ -10,14 +10,10 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="ConsoleLogging" level="debug" additivity="false">
+        <Logger name="logging.ConsoleLogging" level="debug" additivity="false">
             <AppenderRef ref="console"/>
         </Logger>
-        <Logger name="FileLogging" level="debug" additivity="false">
-            <AppenderRef ref="file"/>
-        </Logger>
-        <Logger name="ConsoleAndFileLogging" level="debug" additivity="false">
-            <AppenderRef ref="console"/>
+        <Logger name="logging.FileLogging" level="debug" additivity="false">
             <AppenderRef ref="file"/>
         </Logger>
     </Loggers>
