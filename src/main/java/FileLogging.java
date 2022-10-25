@@ -1,6 +1,10 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class FileLogging implements Logging{
+    Logger logger = LoggerFactory.getLogger(FileLogging.class.getName());
     @Override
-    public void logging() {
-        System.out.println("this is file logging");
+    public void logging(String str) {
+        logger.info(str);
     }
 }

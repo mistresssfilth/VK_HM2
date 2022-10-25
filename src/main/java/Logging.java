@@ -1,3 +1,3 @@
 public interface Logging {
-    void logging();
+    void logging(String str);
 }
