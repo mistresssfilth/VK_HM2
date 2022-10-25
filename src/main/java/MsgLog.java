@@ -1,11 +1,12 @@
-import org.slf4j.Logger;
+import com.google.inject.Inject;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 
 public class MsgLog {
-    FileLogging fileLogging = new FileLogging();
+    @Inject
+    private Logging logger;
     public static int count = 0;
 
 
@@ -14,11 +15,11 @@ public class MsgLog {
             System.out.println("Waiting for new lines. Key in Ctrl+D to exit.");
             while (true) {
                 String str = scanner.nextLine();
-                fileLogging.logging(str);
+                logger.logging(str, count);
                 count++;
-                System.out.println(count);
             }
         } catch (IllegalStateException | NoSuchElementException e) {
+            System.out.println("Error");
         }
     }
 

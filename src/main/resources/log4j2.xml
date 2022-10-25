@@ -2,10 +2,10 @@
 <Configuration status="DEBUG">
     <Appenders>
         <Console name="ConsoleLogger" target="STDOUT">
-            <PatternLayout pattern="N = %m%n"/>
+            <PatternLayout pattern="%m%n"/>
         </Console>
         <File name="FileLogger" fileName="logging.log">
-            <PatternLayout pattern="N = %m%n"/>
+            <PatternLayout pattern="%m%n"/>
         </File>
     </Appenders>
 
